@@ -19,14 +19,14 @@ default: &default
 
 development:
   <<: *default
-  database: next_youtuber_development
+  database: next_youtube_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: next_youtuber_test
+  database: next_youtube_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: next_youtuber_production
-  username: next_youtuber
-  password: <%= ENV['NEXT_YOUTUBER_DATABASE_PASSWORD'] %>
+  database: next_youtube_production
+  username: next_youtube
+  password: <%= ENV['next_youtube_DATABASE_PASSWORD'] %>
