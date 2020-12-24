@@ -12,8 +12,8 @@ class User < ApplicationRecord
   end
 
   validates :subscribers_num,numericality: {
-    with: /\A[0-9]+\z/, message: '半角数字のみ入力可能です'
+    with: /\A[0-9]+\z/, message: 'は半角数字のみ入力可能です'
   }
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
-  validates_format_of :password, with: PASSWORD_REGEX, message: '文字と数字の両方を含めてください'
+  validates_format_of :password, with: PASSWORD_REGEX, message: 'は文字と数字の両方を含めてください'
 end
