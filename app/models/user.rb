@@ -11,6 +11,11 @@ class User < ApplicationRecord
     validates :what_channel
   end
 
+  validates :subscribers_num, numericality: {
+    less_than_or_equal_to: 9999,
+    message: 'が10000人以上の方はご利用いただけません'
+  }
+
   validates :subscribers_num,numericality: {
     with: /\A[0-9]+\z/, message: 'は半角数字のみ入力可能です'
   }
