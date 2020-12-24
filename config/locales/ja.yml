@@ -1,0 +1,11 @@
+ja:
+ activerecord:
+   attributes:
+     user:
+       channel_name: チャンネル名
+       subscribers_num: チャンネル登録者数
+       channel_url: チャンネルURL
+       what_channel: どんなチャンネル?欄
+     post:
+       text: テキスト
+       image: 画像
