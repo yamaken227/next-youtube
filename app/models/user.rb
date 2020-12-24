@@ -16,7 +16,7 @@ class User < ApplicationRecord
     message: 'が10000人以上の方はご利用いただけません'
   }
 
-  validates :subscribers_num,numericality: {
+  validates :subscribers_num, numericality: {
     with: /\A[0-9]+\z/, message: 'は半角数字のみ入力可能です'
   }
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze

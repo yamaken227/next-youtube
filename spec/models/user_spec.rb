@@ -44,42 +44,42 @@ RSpec.describe User, type: :model do
       it 'channel_nameが空だと登録できない' do
         @user.channel_name = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("チャンネル名を入力してください")
+        expect(@user.errors.full_messages).to include('チャンネル名を入力してください')
       end
       it 'subscribers_numが空だと登録できない' do
         @user.subscribers_num = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("チャンネル登録者数を入力してください")
+        expect(@user.errors.full_messages).to include('チャンネル登録者数を入力してください')
       end
       it 'subscribers_numが10,000以上だと登録できない' do
-        @user.subscribers_num = 10000
+        @user.subscribers_num = 10_000
         @user.valid?
-        expect(@user.errors.full_messages).to include("チャンネル登録者数が10000人以上の方はご利用いただけません")
+        expect(@user.errors.full_messages).to include('チャンネル登録者数が10000人以上の方はご利用いただけません')
       end
       it 'subscribers_numが半角数字以外の場合（半角英語では）登録できない' do
         @user.subscribers_num = 'aaa'
         @user.valid?
-        expect(@user.errors.full_messages).to include("チャンネル登録者数は半角数字のみ入力可能です")
+        expect(@user.errors.full_messages).to include('チャンネル登録者数は半角数字のみ入力可能です')
       end
       it 'subscribers_numが半角数字以外の場合（全角）登録できない' do
         @user.subscribers_num = '１０００'
         @user.valid?
-        expect(@user.errors.full_messages).to include("チャンネル登録者数は半角数字のみ入力可能です")
+        expect(@user.errors.full_messages).to include('チャンネル登録者数は半角数字のみ入力可能です')
       end
       it 'subscribers_numが半角英数混合の文字の場合登録できない' do
         @user.subscribers_num = '111a'
         @user.valid?
-        expect(@user.errors.full_messages).to include("チャンネル登録者数は半角数字のみ入力可能です")
+        expect(@user.errors.full_messages).to include('チャンネル登録者数は半角数字のみ入力可能です')
       end
       it 'channel_urlが空だと登録できない' do
         @user.channel_url = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("チャンネルURLを入力してください")
+        expect(@user.errors.full_messages).to include('チャンネルURLを入力してください')
       end
       it 'what_channelが空だと登録できない' do
         @user.what_channel = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("どんなチャンネル?欄を入力してください")
+        expect(@user.errors.full_messages).to include('どんなチャンネル?欄を入力してください')
       end
       it '重複したemailが存在する場合登録できない' do
         @user.save
@@ -96,7 +96,7 @@ RSpec.describe User, type: :model do
       it 'passwordが空では登録できない' do
         @user.password = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("パスワードを入力してください")
+        expect(@user.errors.full_messages).to include('パスワードを入力してください')
       end
       it 'passwordは5文字以下では登録できない' do
         @user.password = 'abcde'
@@ -121,12 +121,12 @@ RSpec.describe User, type: :model do
       it 'passwordは確認用含めて2回入力しないと登録できない' do
         @user.password_confirmation = ''
         @user.valid?
-        expect(@user.errors.full_messages).to include("パスワード（確認用）とパスワードの入力が一致しません")
+        expect(@user.errors.full_messages).to include('パスワード（確認用）とパスワードの入力が一致しません')
       end
       it 'passwordとpassword_confirmationが一致していないと登録できない' do
         @user.password_confirmation = 'abc123abc123'
         @user.valid?
-        expect(@user.errors.full_messages).to include("パスワード（確認用）とパスワードの入力が一致しません")
+        expect(@user.errors.full_messages).to include('パスワード（確認用）とパスワードの入力が一致しません')
       end
     end
   end
