@@ -7,5 +7,6 @@ ja:
        channel_url: チャンネルURL
        what_channel: どんなチャンネル?欄
      post:
-       text: テキスト
-       image: 画像
+       title: 動画のタイトル
+       highlights: 動画の見どころ
+       video_url: 動画のURL
