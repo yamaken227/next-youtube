@@ -1,0 +1,18 @@
+<%= form_with( model: @post, local: true ) do |f| %>
+<%= render 'devise/shared/error_messages', model: f.object %>
+  <div class="field">
+    <%= f.label :title, '動画のタイトル' %><br />
+    <%= f.text_field :title, autofocus: true %>
+  </div>
+  <div class="field">
+    <%= f.label :highlights, '動画の見どころ' %><br />
+    <%= f.text_field :highlights, autofocus: true %>
+  </div>
+  <div class="field">
+    <%= f.label :video_url, '動画のURL' %><br />
+    <%= f.text_field :video_url, autofocus: true %>
+  </div> 
+  <div class="actions">
+    <%= f.submit "投稿" %>
+  </div>
+<% end %>
