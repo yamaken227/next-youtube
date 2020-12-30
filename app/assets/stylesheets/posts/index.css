@@ -4,7 +4,7 @@
   padding: 0px;  
 }
 .index-page {
-  background-color: #000000e7;
+  background-color: #000000;
 }
 .top-image {
   width: 100vw;
@@ -15,7 +15,7 @@
 }
 .image-line p {
   position: absolute;
-  color: white;
+  color: #ffffff;
   font-weight: bold;
   font-size: 3em;
   top: 50%;
@@ -27,11 +27,46 @@
   padding:0;
   background:rgba(0, 0, 0, 0);
   }
+.selling-complaint {
+  color: #ffffff;
+  text-align: center;
+  background-color: #ff0000;
+}
+.video-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+}
 
-  .video-lists {
-    width: 100vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    list-style: none;
-  }
+.list {
+  border-width: 3px 0 0 0;
+  border-style: double;
+  border-color: #ff0000;
+  margin-top: 20px;
+}
+.post-btn {
+  width: 120px;
+  background: #ff0000;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 32px;
+  right: 32px;
+  position: fixed;
+  padding: 15px;
+}
+.post-btn-text {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+.post-btn-icon {
+  width: 100%;
+}
+.channel-name p {
+  font-size: 20px;
+  
+}
