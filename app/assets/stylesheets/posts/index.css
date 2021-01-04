@@ -68,5 +68,30 @@
 }
 .channel-name p {
   font-size: 20px;
-  
+
+}
+.shuffle-btn {
+  width: 150px;
+  background: #ff0000;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 400px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  position: fixed;
+  padding: 16px 24px;
+  box-shadow: 0px 2px 4px #0000003a;
+  transition: box-shadow .3s;
+}
+.shuffle-btn:hover{
+  box-shadow: 0px 4px 8px #fff;
+}
+.shuffle-btn-text {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  font-weight :bold;
+  text-decoration: none;
+  margin-bottom: 5px;
 }
