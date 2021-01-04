@@ -45,6 +45,10 @@
   border-style: double;
   border-color: #ff0000;
   margin-top: 20px;
+  font-size: 20px;
+}
+.list:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 .post-btn {
   width: 120px;
@@ -66,10 +70,21 @@
 .post-btn-icon {
   width: 100%;
 }
-.channel-name p {
-  font-size: 20px;
-
+.channel-detail {
+  color:white;
+  text-decoration: none;
 }
+.video-detail {
+  color:white;
+  text-decoration: none;
+}
+.channel-detail:hover {
+  color: aqua;
+}
+.video-detail:hover {
+  color: aqua;
+}
+
 .shuffle-btn {
   width: 150px;
   background: #ff0000;
