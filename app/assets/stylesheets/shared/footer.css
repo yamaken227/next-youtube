@@ -3,7 +3,7 @@
 
 .ad-footer-contents {
   width: 100vw;
-  background-image: image-url('furima-footer.png');
+  background-color: #ff0000;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -19,7 +19,7 @@
 .ad-footer-title {
   font-size: 4vh;
   margin-bottom: 2vh;
-  color: rgb(145, 48, 104);
+  color: #ffffff;
 }
 
 .ad-footer-explain {
