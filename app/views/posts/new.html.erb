@@ -1,5 +1,5 @@
 <%= form_with( model: @post, local: true ) do |f| %>
-<%= render 'devise/shared/error_messages', model: f.object %>
+<%= render 'shared/error_messages', model: f.object %>
   <div class="field">
     <%= f.label :title, '動画のタイトル' %><br />
     <%= f.text_field :title, autofocus: true %>

@@ -1,4 +1,45 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
-<%= link_to '投稿', new_post_path %>
-<%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+<%= render "shared/header" %>
+<div class="index-page">
+  <div class="image-line">
+    <%= link_to image_tag("toppage_image.jpg", class:"top-image"), "/" %>
+    <p>Let's Shuffle</p>
+  </div>
+  <div class="selling-complaint">
+    <h1>Shuffleボタンを押してお気に入りの動画を見つけよう</h1>
+  </div>
+  <ul class='video-lists'>
+    <% if @posts.present? %>
+    <%# 動画がいっぽんでもあるとき %>
+      <% @posts.each do |post| %>
+        <li class='list'>
+          <div class="video-url">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= post.video_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="channel-name">
+            <p>チャンネル名：<%= post.user.channel_name%></p>
+            <p>登録時チャンネル登録者数：<%= post.user.subscribers_num %>人</p>
+            <p><%= link_to "動画の詳細はこちら", post_path(post.id) , class: 'channel-name' %></p>
+          </div>
+        </li>
+      <% end %>
+    <% else %>
+    <%# 動画がいっぽんもないとき %>
+      <div class="none-video">
+        <% if user_signed_in? %>
+          <h1>早速動画を投稿しよう！</h1>
+        <% else %>
+          <h1>動画が投稿されるまでお待ちくださいませ</h1>
+        <% end %>
+      </div>
+    <% end %>
+  </ul>
+  <% if user_signed_in? %>
+    <%= link_to(new_post_path, class: 'post-btn') do %>
+      <span class='post-btn-text'>投稿する</span>
+      <%= image_tag 'icon_post.png' , size: '90x90' ,class: "post-btn-icon" %>
+    <% end %>
+  <% end %>
+  <%= render "shared/footer"%>
+</div>
+
+
