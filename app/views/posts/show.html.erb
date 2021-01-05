@@ -6,8 +6,8 @@
   <table class="detail-table">
     <tbody>
       <tr>
-        <th class="detail-post">動画投稿者</th>
-        <td class="detail-info"><%= link_to @post.user.channel_name,@post.user.channel_url %></td>
+        <th class="detail-post">PV数</th>
+        <td class="detail-info"><%=  @post.impressionist_count %>回　　※PV数とは、ユーザーがページを閲覧した回数です</td>
       </tr>
       <tr>
         <th class="detail-post">動画タイトル</th>
@@ -16,6 +16,10 @@
       <tr>
         <th class="detail-post">動画の見どころ</th>
         <td class="detail-info"><%= @post.highlights %></td>
+      </tr>
+      <tr>
+        <th class="detail-post">動画投稿者</th>
+        <td class="detail-info"><%= link_to @post.user.channel_name,@post.user.channel_url %></td>
       </tr>
       <tr>
         <th class="detail-post">YouTubeで見る</th>

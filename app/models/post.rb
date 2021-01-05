@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+  is_impressionable
   belongs_to :user
   
   with_options presence: true do
