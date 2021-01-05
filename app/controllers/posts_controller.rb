@@ -21,6 +21,8 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     impressionist(@post, nil, unique: [:session_hash])
+    @message = Message.new
+    @messages = @post.messages
   end
 
   private
