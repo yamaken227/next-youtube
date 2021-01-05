@@ -16,9 +16,8 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= post.video_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="channel-name">
-            <p>チャンネル名：<%= post.user.channel_name%></p>
-            <p>登録時チャンネル登録者数：<%= post.user.subscribers_num %>人</p>
-            <p><%= link_to "動画の詳細はこちら", post_path(post.id) , class: 'channel-name' %></p>
+            <p><%= link_to "投稿者の詳細はこちら", user_path(post.user_id) , class: 'channel-detail' %></p>
+            <p><%= link_to "動画の詳細はこちら", post_path(post.id) , class: 'video-detail' %></p>
           </div>
         </li>
       <% end %>

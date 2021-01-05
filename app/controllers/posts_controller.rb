@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  impressionist :actions=> [:show]
   def index
     @posts = Post.order("RAND()").limit(9)
   end
@@ -16,8 +17,10 @@ class PostsController < ApplicationController
       render :new
     end
   end
-  def show
 
+  def show
+    @post = Post.find(params[:id])
+    impressionist(@post, nil, unique: [:session_hash])
   end
 
   private
