@@ -1,1 +1,27 @@
-<h1>動画の詳細ページ仮置き</h1>
+<%= render "shared/header" %>
+<div class="video-detail-page">
+  <div class="video">
+    <iframe width="1000" height="500" src="https://www.youtube.com/embed/<%= @post.video_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <table class="detail-table">
+    <tbody>
+      <tr>
+        <th class="detail-post">動画投稿者</th>
+        <td class="detail-info"><%= link_to @post.user.channel_name,@post.user.channel_url %></td>
+      </tr>
+      <tr>
+        <th class="detail-post">動画タイトル</th>
+        <td class="detail-info"><%= @post.title %></td>
+      </tr>
+      <tr>
+        <th class="detail-post">動画の見どころ</th>
+        <td class="detail-info"><%= @post.highlights %></td>
+      </tr>
+      <tr>
+        <th class="detail-post">YouTubeで見る</th>
+        <% url = 'https://youtu.be/' + @post.video_url %>
+        <td class="detail-info"><%= link_to url,url %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

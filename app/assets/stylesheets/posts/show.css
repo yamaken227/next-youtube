@@ -1,0 +1,25 @@
+.video {
+  background-color: hsl(0, 0%, 0%);
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.detail-table {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.detail-post {
+  width: 20%;
+  background-color: #eee;
+  border: 2px solid #dedede;
+  font-size: 18px;
+  text-align: center;
+}
+
+.detail-info {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 18px;
+}
