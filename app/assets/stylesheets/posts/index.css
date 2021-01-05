@@ -8,7 +8,7 @@
 }
 .top-image {
   width: 100vw;
-  height: 88vh;
+  height: 85vh;
 }
 .image-line {
   position: relative;
@@ -90,10 +90,11 @@
   background: #ff0000;
   text-align: center;
   border-radius: 4%;
-  bottom: 400px;
+  bottom: 250px;
   left: 0px;
   right: 0px;
   margin: auto;
+  margin-top: 100px;
   position: fixed;
   padding: 16px 24px;
   box-shadow: 0px 2px 4px #0000003a;

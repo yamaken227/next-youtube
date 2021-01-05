@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   impressionist :actions=> [:show]
   def index
-    @posts = Post.order("RAND()").limit(9)
+    @posts = Post.order("RAND()").limit(6)
   end
   def new
     @post = Post.new
