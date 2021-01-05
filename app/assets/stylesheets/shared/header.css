@@ -16,9 +16,11 @@
   list-style: none;
   align-items: flex-end;
   font-size: 18px;
+  margin-right: 3vw;
 }
 .channel-name {
   text-decoration: none;
+  line-height: 32px;
   margin-right: 3vw;
   color: #ffffff;
   font-weight: bold;
