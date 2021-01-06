@@ -22,7 +22,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     impressionist(@post, nil, unique: [:session_hash])
     @message = Message.new
-    @messages = @post.messages
+    @messages = @post.messages.order(id: "DESC")
   end
 
   private
