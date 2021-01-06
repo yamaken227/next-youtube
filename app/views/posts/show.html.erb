@@ -29,3 +29,27 @@
     </tbody>
   </table>
 </div>
+<div class="container">
+  <% if user_signed_in? && @post.user.id == current_user.id %>
+    <div class="messages">
+      <h2>応援メッセージ一覧</h2>
+      <% @messages.each do |message| %>
+        <p><%= message.message %></p>
+      <% end %>
+    </div>
+  <% else %>
+    <%= form_with(model: [@post, @message], class: "message-form", local: true) do |form| %>
+      <%= form.text_area :message, placeholder: "応援メッセージを送る", rows: "2" ,class: "message-area" %>
+      <p class="precautionary-statement">※不適切な発言はお控えください</p>
+      <%= form.submit "送信", class:"submit-btn" %>
+    <% end %>
+  <% end %>
+</div>
+<div class="page-move">
+  <%= link_to(root_path, class: 'top-btn') do %>
+    <span class='common-btn-text'>トップページへ</span>
+  <% end %>
+  <%= link_to("#", class: 'user-btn') do %>
+    <span class='common-btn-text'> 投稿者のページへ</span>
+  <% end %>
+</div>

@@ -13,7 +13,7 @@
       <% @posts.each do |post| %>
         <li class='list'>
           <div class="video-url">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= post.video_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="710" height="315" src="https://www.youtube.com/embed/<%= post.video_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="channel-name">
             <p><%= link_to "投稿者の詳細はこちら", user_path(post.user_id) , class: 'channel-detail' %></p>

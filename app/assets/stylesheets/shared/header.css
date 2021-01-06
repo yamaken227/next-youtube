@@ -11,14 +11,19 @@
 .left-character {
   padding-left: 30px;
 }
+.servise-name {
+  color: #ffffff;
+}
 .right-list {
   display: flex;
   list-style: none;
   align-items: flex-end;
   font-size: 18px;
+  margin-right: 3vw;
 }
 .channel-name {
   text-decoration: none;
+  line-height: 32px;
   margin-right: 3vw;
   color: #ffffff;
   font-weight: bold;
@@ -41,7 +46,6 @@
 
 .sign-up {
   text-decoration: none;
-  padding-right: 30px;
   color: #ffffff;
   font-weight: bold;
 }
