@@ -11,6 +11,9 @@
 .left-character {
   padding-left: 30px;
 }
+.servise-name {
+  color: #ffffff;
+}
 .right-list {
   display: flex;
   list-style: none;
