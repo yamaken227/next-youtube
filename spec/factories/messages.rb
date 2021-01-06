@@ -1,9 +1,6 @@
 FactoryBot.define do
   factory :message do
-    message          { 'すてきですね' }
+    message { 'すてきですね' }
     association :post
   end
 end
-
-
-
