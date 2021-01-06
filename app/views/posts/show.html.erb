@@ -45,6 +45,11 @@
     <% end %>
   <% end %>
 </div>
-<%= link_to(:back, class: 'back-btn') do %>
-  <span class='back-btn-text'>←　戻る</span>
-<% end %>
+<div class="page-move">
+  <%= link_to(root_path, class: 'top-btn') do %>
+    <span class='common-btn-text'>トップページへ</span>
+  <% end %>
+  <%= link_to("#", class: 'user-btn') do %>
+    <span class='common-btn-text'> 投稿者のページへ</span>
+  <% end %>
+</div>
