@@ -1,1 +1,44 @@
-<h1>a</h1>
+<div class="user-detail-page">
+  <div class="user-top-character">
+    <% if @user.id == current_user.id %>
+      <h1>マイページ</h1>
+    <% else %>
+      <h1><%= @user.channel_name %>さんのページ</h1>
+    <% end %>
+  </div>
+  <table class="user-detail-table">
+    <tbody>
+      <tr>
+        <th class="user-detail">チャンネル名</th>
+        <td class="user-info"><%= @user.channel_name %></td>
+      </tr>
+      <tr>
+        <th class="user-detail">YouTubeチャンネルURL</th>
+        <td class="user-info"><%= link_to @user.channel_url,@user.channel_url %></td>
+      </tr>
+      <tr>
+        <th class="user-detail">登録時チャンネル登録者数</th>
+        <td class="user-info"><%= @user.subscribers_num %>人</td>
+      </tr>
+      <tr>
+        <th class="user-detail">どんなチャンネル？</th>
+        <td class="user-info"><%= @user.what_channel %></td>
+      </tr>
+      <tr>
+        <th class="user-detail">TwitterURL</th>
+        <td class="user-info"><%= link_to @user.twitter_url,@user.twitter_url %></td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="new-video">
+    <h1><%= @user.channel_name %>さんの動画</h1>
+    <% if @posts.max.video_url != nil %>
+      <% video = @posts.order('RAND()').limit(1) %>
+      <div class="video">
+        <iframe width="710" height="400" src="https://www.youtube.com/embed/<%= video.max.video_url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    <% else %>
+      <p>動画がありません</p>
+    <% end %>
+  </div>
+</div>

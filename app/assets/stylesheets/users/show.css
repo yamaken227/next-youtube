@@ -1,0 +1,44 @@
+.user-detail-page {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("/images/user_detail_background.jpg");
+  background-color:rgba(255,255,255,0.9);
+  background-blend-mode:lighten;
+  background-size: 100%;
+  text-align: center;
+}
+.user-top-character h1 {
+  padding-top: 20px;
+  margin-bottom: 50px;
+  border-bottom: solid;
+  border-color: rgba(255,0,0,0.4);
+  display: inline-block;
+}
+.user-detail-table {
+  margin-bottom: 30px;
+  width: 100%;
+}
+.user-detail {
+  width: 20%;
+  background-color: #eee;
+  border: 2px solid #dededf;
+  font-size: 18px;
+  text-align: center;
+}
+.user-info {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 18px;
+}
+
+.new-video h1 {
+  border-bottom: solid;
+  border-color: rgba(255,0,0,0.4);
+  display: inline-block;
+}
+
+.video {
+  text-align: center;
+  background-color: rgba(255,255,255,0);
+}
