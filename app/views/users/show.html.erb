@@ -31,14 +31,23 @@
     </tbody>
   </table>
   <div class="new-video">
-    <h1><%= @user.channel_name %>さんの動画</h1>
-    <% if @posts.max.video_url != nil %>
-      <% video = @posts.order('RAND()').limit(1) %>
-      <div class="video">
-        <iframe width="710" height="400" src="https://www.youtube.com/embed/<%= video.max.video_url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
+    <h1>投稿動画一覧</h1>
+    <% if @lists.present? %>
+      <ul class='video-lists'>
+        <% @lists.each do |list| %>
+          <div class="video">
+            <iframe width="710" height="400" src="https://www.youtube.com/embed/<%= list.video_url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        <% end %>
+      </ul>
+      <%= paginate @lists %>
     <% else %>
       <p>動画がありません</p>
+    <% end %>
+  </div>
+  <div class="page-move">
+    <%= link_to(root_path, class: 'top-btn') do %>
+      <span class='common-btn-text'>＜＜トップページへ</span>
     <% end %>
   </div>
 </div>
