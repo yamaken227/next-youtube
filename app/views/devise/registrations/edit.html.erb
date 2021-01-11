@@ -4,7 +4,29 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :channel_name, 'チャンネル名' %><br />
+    <%= f.text_field :channel_name, autofocus: true ,autocomplete:"channel_name"%>
+  </div>
+
+  <div class="field">
+    <%= f.label :subscribers_num, 'チャンネル登録者数' %><br />
+    <%= f.text_field :subscribers_num, autofocus: true,autocomplete:"subscribers_num" %>人
+  </div>
+  <div class="field">
+    <%= f.label :channel_url, 'YouTubeチャンネルURL' %><br />
+    <%= f.text_field :channel_url, autofocus: true,autocomplete:"channel_url" %>
+  </div>
+   <div class="field">
+    <%= f.label :twitter_url, 'TwitterURL' %><br />
+    <%= f.text_field :twitter_url, autofocus: true,autocomplete:"twitter_url" %>
+  </div> 
+   <div class="field">
+    <%= f.label :what_channel, 'どんなチャンネル？' %><br />
+    <%= f.text_area :what_channel, autofocus: true,autocomplete:"what_channel" %>
+  </div> 
+
+  <div class="field">
+    <%= f.label :email, 'メールアドレス' %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
@@ -12,32 +34,9 @@
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
-  </div>
-
   <div class="actions">
-    <%= f.submit "Update" %>
+    <%= f.submit "更新" %>
   </div>
 <% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
 <%= link_to "Back", :back %>
