@@ -1,0 +1,102 @@
+.user-detail-page {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("/images/user_detail_background.jpg");
+  background-color:rgba(255,255,255,0.9);
+  background-blend-mode:lighten;
+  background-size: 100%;
+  text-align: center;
+}
+.user-top-character h1 {
+  padding-top: 20px;
+  margin-bottom: 50px;
+  border-bottom: solid;
+  border-color: rgba(255,0,0,0.4);
+  display: inline-block;
+}
+.user-detail-table {
+  margin-bottom: 30px;
+  width: 100%;
+}
+.user-detail {
+  width: 20%;
+  background-color: #eee;
+  border: 2px solid #dededf;
+  font-size: 18px;
+  text-align: center;
+}
+.user-info {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 18px;
+}
+
+.new-video h1 {
+  border-bottom: solid;
+  border-color: rgba(255,0,0,0.4);
+  display: inline-block;
+}
+
+.video-u-p {
+  text-align: center;
+  text-align: left;
+  margin-top: 20px;
+}
+.video-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+}
+.video-u-p:hover {
+  background-color:#dedede;
+}
+.video-title {
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+}
+.video-title:hover {
+  color:blue;
+}
+.video-edit {
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+}
+.video-edit:hover {
+  color:blue;
+}
+.video-destroy {
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+}
+.video-destroy:hover {
+  color:blue;
+}
+.page-move {
+  display: flex;
+  justify-content: space-between;
+}
+.top-btn {
+  background: #f5f5f5;
+  border-radius: 4%;
+  padding: 16px 24px;
+  box-shadow: 0px 2px 4px #0000003a;
+  padding: 15px;
+  margin-left: 15px;
+}
+.top-btn:hover {
+  background-color: #dedede;
+  box-shadow: 0px 4px 8px #fff;
+}
+.common-btn-text {
+  color: #000000;
+  font-size: 15px;
+  font-weight :bold;
+  text-decoration: none;
+  margin-bottom: 5px;
+}

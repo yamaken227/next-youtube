@@ -8,7 +8,7 @@
 }
 .top-image {
   width: 100vw;
-  height: 85vh;
+  height: 88vh;
 }
 .image-line {
   position: relative;
@@ -52,7 +52,6 @@
 }
 .post-btn {
   width: 120px;
-  height: 150px;
   background: #ff0000;
   text-align: center;
   border-radius: 4%;
@@ -64,8 +63,7 @@
 .post-btn-text {
   color: #fff;
   display: block;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 18px;
   text-decoration: none;
   margin-bottom: 5px;
 }
@@ -92,11 +90,10 @@
   background: #ff0000;
   text-align: center;
   border-radius: 4%;
-  bottom: 250px;
+  bottom: 270px;
   left: 0px;
   right: 0px;
   margin: auto;
-  margin-top: 100px;
   position: fixed;
   padding: 16px 24px;
   box-shadow: 0px 2px 4px #0000003a;

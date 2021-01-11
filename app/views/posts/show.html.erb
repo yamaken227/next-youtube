@@ -1,6 +1,6 @@
 <%= render "shared/header" %>
 <div class="video-detail-page">
-  <div class="video">
+  <div class="video-watch">
     <iframe width="1000" height="500" src="https://www.youtube.com/embed/<%= @post.video_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <table class="detail-table">
@@ -49,7 +49,7 @@
   <%= link_to(root_path, class: 'top-btn') do %>
     <span class='common-btn-text'>トップページへ</span>
   <% end %>
-  <%= link_to("#", class: 'user-btn') do %>
+  <%= link_to(user_path(@post.user_id), class: 'user-btn') do %>
     <span class='common-btn-text'> 投稿者のページへ</span>
   <% end %>
 </div>
