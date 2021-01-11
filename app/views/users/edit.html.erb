@@ -1,0 +1,10 @@
+<h1>プロフィール編集</h1>
+
+<%= form_with model: @user do |form| %>
+  <div>チャンネル名<%= form.text_field :channel_name %></div>
+  <div>登録者数<%= form.text_field :subscribers_num %></div>
+  <div>YouTubeチャンネルURL<%= form.text_field :channel_url %></div>
+  <div>どんなチャンネル？<%= form.text_field :what_channel %></div>
+  <div>TwitterURL<%= form.text_field :twitter_url %></div>
+  <div><%= form.submit "保存" %></div>
+<% end %>
