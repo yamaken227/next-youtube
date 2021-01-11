@@ -35,9 +35,16 @@
     <% if @lists.present? %>
       <ul class='video-lists'>
         <% @lists.each do |list| %>
-          <div class="video">
-            <iframe width="710" height="400" src="https://www.youtube.com/embed/<%= list.video_url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
+          <li class="video-list">
+            <div class="video-u-p">
+              <iframe width="710" height="400" src="https://www.youtube.com/embed/<%= list.video_url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <p><%= link_to list.title, post_path(list.id) , class: 'video-title' %></p>
+              <% if @user.id == current_user.id %>
+                <p><%= link_to 'この動画を編集する', edit_post_path(list.id), method: :get, class:'video-edit' %></p>
+                <p><%= link_to 'この動画を削除する', post_path(list.id), method: :delete, data: { confirm: 'この動画を削除しますか？' }, class:'video-destroy' %></p>
+              <% end %>
+            </div>
+          </li>
         <% end %>
       </ul>
       <%= paginate @lists %>

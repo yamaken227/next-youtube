@@ -38,9 +38,10 @@
   display: inline-block;
 }
 
-.video {
+.video-u-p {
   text-align: center;
-  background-color: rgba(255,255,255,0);
+  text-align: left;
+  margin-top: 20px;
 }
 .video-lists {
   width: 100vw;
@@ -49,7 +50,33 @@
   justify-content: space-between;
   list-style: none;
 }
-
+.video-u-p:hover {
+  background-color:#dedede;
+}
+.video-title {
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+}
+.video-title:hover {
+  color:blue;
+}
+.video-edit {
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+}
+.video-edit:hover {
+  color:blue;
+}
+.video-destroy {
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+}
+.video-destroy:hover {
+  color:blue;
+}
 .page-move {
   display: flex;
   justify-content: space-between;

@@ -27,6 +27,18 @@ class PostsController < ApplicationController
     @messages = @post.messages.order(id: 'DESC')
   end
 
+  def destroy
+    post = Post.find(params[:id])
+    post_user = post.user_id
+    binding.pry
+    if current_user.id == post.user_id
+      post.destroy
+      redirect_to user_path(post_user)
+    else
+      render 'users/show'
+    end
+  end
+
   private
 
   def post_params
