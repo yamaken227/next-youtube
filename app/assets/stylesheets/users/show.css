@@ -9,10 +9,19 @@
 }
 .user-top-character h1 {
   padding-top: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   border-bottom: solid;
   border-color: rgba(255,0,0,0.4);
   display: inline-block;
+}
+.edit-user {
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.edit-user:hover {
+  color:blue;
 }
 .user-detail-table {
   margin-bottom: 30px;
