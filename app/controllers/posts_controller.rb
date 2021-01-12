@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   impressionist actions: [:show]
   before_action :authenticate_user!, only: [:new, :create, :edit, :destroy]
-  before_action :set_post, only: [:edit,:update]
+  before_action :set_post, only: [:edit, :update]
   def index
     @posts = Post.order('RAND()').limit(6)
   end
@@ -51,12 +51,14 @@ class PostsController < ApplicationController
       render :edit
     end
   end
+
   private
 
   def post_params
     params.require(:post).permit(:title, :highlights, :video_url)
           .merge(user_id: current_user.id)
   end
+
   def set_post
     @post = Post.find(params[:id])
   end

@@ -22,13 +22,13 @@ class User < ApplicationRecord
     with: /\A[0-9]+\z/, message: 'は半角数字のみ入力可能です'
   }
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
-  validates_format_of :password, with: PASSWORD_REGEX, message: 'は文字と数字の両方を含めてください', :on => :create
+  validates_format_of :password, with: PASSWORD_REGEX, message: 'は文字と数字の両方を含めてください', on: :create
 
-#  with_options if: 'password || new_record?' do |user|
-#    PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
-#    validates_format_of :password, with: PASSWORD_REGEX, message: 'は文字と数字の両方を含めてください'
-#  end
-  
+  #  with_options if: 'password || new_record?' do |user|
+  #    PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
+  #    validates_format_of :password, with: PASSWORD_REGEX, message: 'は文字と数字の両方を含めてください'
+  #  end
+
   def update_without_password(params, *options)
     params.delete(:current_password)
 
@@ -36,12 +36,10 @@ class User < ApplicationRecord
       params.delete(:password)
       params.delete(:password_confirmation)
     end
-    
+
     result = update_attributes(params, *options)
-    result = self.save(validate: false)
+    result = save(validate: false)
     clean_up_passwords
     result
   end
-
-
 end
