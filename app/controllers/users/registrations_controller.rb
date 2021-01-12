@@ -44,13 +44,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
     resource.update_without_password(params)
   end
 
-  #任意  更新後のパスを指定
+  # 任意  更新後のパスを指定
   def after_update_path_for(resource)
-    user_path(resource) 
+    user_path(resource)
   end
 
   def configure_account_update_params
-    devise_parameter_sanitizer.permit(:account_update, keys: [:channel_name,:subscribers_num,:channel_url,:what_channel,:twitter_url])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:channel_name,
+                                                              :subscribers_num, :channel_url, :what_channel, :twitter_url])
   end
 
   # If you have extra params to permit, append them to the sanitizer.
@@ -72,5 +73,4 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def after_inactive_sign_up_path_for(resource)
   #   super(resource)
   # end
-
 end

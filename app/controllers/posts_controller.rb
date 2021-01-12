@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
   impressionist actions: [:show]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :destroy]
+  before_action :set_post, only: [:edit, :update]
   def index
     @posts = Post.order('RAND()').limit(6)
   end
@@ -30,7 +32,6 @@ class PostsController < ApplicationController
   def destroy
     post = Post.find(params[:id])
     post_user = post.user_id
-    binding.pry
     if current_user.id == post.user_id
       post.destroy
       redirect_to user_path(post_user)
@@ -39,10 +40,26 @@ class PostsController < ApplicationController
     end
   end
 
+  def edit
+    redirect_to root_path unless current_user.id == @post.user.id
+  end
+
+  def update
+    if @post.update(post_params)
+      redirect_to post_path
+    else
+      render :edit
+    end
+  end
+
   private
 
   def post_params
     params.require(:post).permit(:title, :highlights, :video_url)
           .merge(user_id: current_user.id)
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
   end
 end
