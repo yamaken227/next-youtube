@@ -2,6 +2,10 @@ class PostsController < ApplicationController
   impressionist actions: [:show]
   before_action :authenticate_user!, only: [:new, :create, :edit, :destroy]
   before_action :set_post, only: [:edit, :update]
+  
+  def home
+  end
+
   def index
     @posts = Post.order('RAND()').limit(6)
   end
