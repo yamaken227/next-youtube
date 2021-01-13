@@ -1,0 +1,15 @@
+<%= render "shared/header" %>
+<div class="home-page">
+  <%= video_tag "/videos/mixkit-many-stars-in-the-night-sky-4124.mp4" , autoplay: true, muted: true, loop: true, class:'top-video' %>
+  <div class="home-content">
+    <h2>チャンネル登録者10000人未満の方限定サービス</h2>
+    <h1>Let's Shuffle</h1>
+    <% if user_signed_in? %>
+      <%= link_to "Let's increase the number of registrants." , posts_path, class:"poster-link" %> 
+    <% else%>
+      <%= link_to "Let's go find the next generation YouTuber." , posts_path, class:"audience-link" %>
+    <% end %>
+  </div>
+</div>
+
+
