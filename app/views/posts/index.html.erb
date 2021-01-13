@@ -1,11 +1,8 @@
 <%= render "shared/header" %>
 <div class="index-page">
   <div class="image-line">
-    <%= link_to image_tag("toppage_image.jpg", class:"top-image"), "/" %>
+    <%= image_tag("toppage_image.jpg", class:"top-image")%>
     <p>Let's Shuffle</p>
-  </div>
-  <div class="selling-complaint">
-    <h1>Shuffleボタンを押してお気に入りの動画を見つけよう</h1>
   </div>
   <ul class='video-lists'>
     <% if @posts.present? %>

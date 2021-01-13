@@ -8,7 +8,7 @@
 }
 .top-image {
   width: 100vw;
-  height: 88vh;
+  height: 90vh;
 }
 .image-line {
   position: relative;
@@ -27,11 +27,6 @@
   padding:0;
   background:rgba(0, 0, 0, 0);
   }
-.selling-complaint {
-  color: #ffffff;
-  text-align: center;
-  background-color: #ff0000;
-}
 .video-lists {
   width: 100vw;
   display: flex;
@@ -44,7 +39,7 @@
   border-width: 3px 0 0 0;
   border-style: double;
   border-color: #ff0000;
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 20px;
 }
 .list:hover {
