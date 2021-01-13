@@ -1,5 +1,5 @@
 <div class='top-page-header'>
-  <h1 class='left-character'><%= link_to 'Shuffle Video', root_path , class: 'servise-name' %></h1>
+  <h1 class='left-character'><%= link_to 'Shuffle Video', posts_path , class: 'servise-name' %></h1>
   <ul class='right-list'>
     <% if user_signed_in? %>
       <li><%= link_to current_user.channel_name, user_path(current_user.id)  , class: 'channel-name' %></li>
