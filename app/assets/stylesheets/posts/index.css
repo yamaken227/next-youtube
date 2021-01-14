@@ -27,7 +27,8 @@
   padding:0;
   background:rgba(0, 0, 0, 0);
   }
-.video-lists {
+
+.post-table {
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
