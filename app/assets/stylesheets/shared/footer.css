@@ -3,7 +3,7 @@
 
 .ad-footer-contents {
   width: 100vw;
-  background-color: #ff0000;
+  background-color: rgba(	240,128,128, 0.2);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -17,12 +17,14 @@
 }
 
 .ad-footer-title {
-  font-size: 4vh;
+  font-size: 6vh;
   margin-bottom: 2vh;
   color: #ffffff;
 }
 
 .ad-footer-explain {
+  margin-bottom: 1vh;
+  font-weight: bold;
   font-size: 3vh;
   line-height: 30px;
 }
@@ -33,7 +35,7 @@
   width: 100vw;
   padding: 5vh 0;
   color: #FFF;
-  background-color: #272727;
+  background-color: #000000;
   text-align: center;
 }
 
@@ -73,7 +75,7 @@
 }
 
 .apple-btn {
-  margin-right: 1vw;
+  margin-right: 10vw;
   height: 9vh;
 }
 
