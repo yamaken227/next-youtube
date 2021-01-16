@@ -1,51 +1,52 @@
-<h1>新規登録</h1>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :channel_name, 'チャンネル名' %><br />
-    <%= f.text_field :channel_name, autofocus: true %>
+<div class="registration-contents">
+  <header class="registration-header">
+    <h1>新規登録フォーム</h1>
+  </header>
+  <div class="registration-main">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+      <div class="field-registration">
+        <div class="field">
+          <%= f.label :channel_name, 'YouTubeチャンネル名',class:"registration-label-text" %>
+          <%= f.text_field :channel_name,class:"registration-text", autofocus: true %>
+        </div>
+        <div class="field">
+          <%= f.label :subscribers_num, 'チャンネル登録者数(数字のみ)',class:"registration-label-text" %>
+          <%= f.text_field :subscribers_num,class:"registration-text", autofocus: true %>
+        </div>
+        <div class="field">
+          <%= f.label :channel_url, 'YouTubeチャンネルURL',class:"registration-label-text" %>
+          <%= f.text_field :channel_url,class:"registration-text", autofocus: true %>
+        </div>
+        <div class="field">
+          <%= f.label :twitter_url, 'TwitterURL',class:"registration-label-text" %>
+          <%= f.text_field :twitter_url,class:"registration-text", autofocus: true %>
+        </div> 
+        <div class="field">
+          <%= f.label :what_channel, 'どんなチャンネル？',class:"registration-label-text" %>
+          <%= f.text_area :what_channel,class:"registration-text", autofocus: true %>
+        </div> 
+        <div class="field">
+          <%= f.label :email, 'メールアドレス',class:"registration-label-text" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"registration-text" %>
+        </div>
+        <div class="field">
+          <%= f.label :password, 'パスワード(6文字以上)',class:"registration-label-text" %>
+          <%= f.password_field :password, autocomplete: "new-password",class:"registration-text" %>
+        </div>
+        <div class="field">
+          <%= f.label :password_confirmation, 'パスワード(確認用)',class:"registration-label-text" %>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password",class:"registration-text" %>
+        </div>
+        <div class="actions">
+          <%= f.submit "登録" %>
+        </div>
+      </div>
+    <% end %>
   </div>
-
-  <div class="field">
-    <%= f.label :subscribers_num, 'チャンネル登録者数' %><br />
-    <%= f.text_field :subscribers_num, autofocus: true %>人
+  <div class="registration-page-move">
+    <%= link_to(posts_path, class: 'registration-top-btn') do %>
+      <span class='registration-common-btn-text'>トップページへ</span>
+    <% end %>
   </div>
-  <div class="field">
-    <%= f.label :channel_url, 'YouTubeチャンネルURL' %><br />
-    <%= f.text_field :channel_url, autofocus: true %>
-  </div>
-   <div class="field">
-    <%= f.label :twitter_url, 'TwitterURL' %><br />
-    <%= f.text_field :twitter_url, autofocus: true %>
-  </div> 
-   <div class="field">
-    <%= f.label :what_channel, 'どんなチャンネル？' %><br />
-    <%= f.text_area :what_channel, autofocus: true %>
-  </div> 
-
-  <div class="field">
-    <%= f.label :email, 'メールアドレス' %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password, 'パスワード' %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation, 'パスワード(確認用)' %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "登録" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>
