@@ -1,42 +1,47 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :channel_name, 'チャンネル名' %><br />
-    <%= f.text_field :channel_name, autofocus: true ,autocomplete:"channel_name"%>
+<div class="registration-contents">
+  <header class="registration-header">
+    <h1>ユーザー情報編集フォーム</h1>
+  </header>
+  <div class="registration-main">
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+      <div class="field-registration">
+        <div class="field">
+          <%= f.label :channel_name, 'YouTubeチャンネル名',class:"registration-label-text" %>
+          <%= f.text_field :channel_name,class:"registration-text", autofocus: true %>
+        </div>
+        <div class="field">
+          <%= f.label :subscribers_num, 'チャンネル登録者数(数字のみ)',class:"registration-label-text" %>
+          <%= f.text_field :subscribers_num,class:"registration-text", autofocus: true %>
+        </div>
+        <div class="field">
+          <%= f.label :channel_url, 'YouTubeチャンネルURL',class:"registration-label-text" %>
+          <%= f.text_field :channel_url,class:"registration-text", autofocus: true %>
+        </div>
+        <div class="field">
+          <%= f.label :twitter_url, 'TwitterURL',class:"registration-label-text" %>
+          <%= f.text_field :twitter_url,class:"registration-text", autofocus: true %>
+        </div> 
+        <div class="field">
+          <%= f.label :what_channel, 'どんなチャンネル？',class:"registration-label-text" %>
+          <%= f.text_area :what_channel,class:"registration-text", autofocus: true %>
+        </div> 
+        <div class="field">
+          <%= f.label :email, 'メールアドレス',class:"registration-label-text" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email",class:"registration-text" %>
+        </div>
+        <div class="actions">
+          <%= f.submit "更新" %>
+        </div>
+      </div>
+    <% end %>
   </div>
-
-  <div class="field">
-    <%= f.label :subscribers_num, 'チャンネル登録者数' %><br />
-    <%= f.text_field :subscribers_num, autofocus: true,autocomplete:"subscribers_num" %>人
+  <div class="registration-page-move">
+    <%= link_to(posts_path, class: 'registration-top-btn') do %>
+      <span class='registration-common-btn-text'>トップページへ</span>
+    <% end %>
+    <%= link_to(user_path(current_user.id), class: 'registration-top-btn') do %>
+      <span class='registration-common-btn-text'>マイページへ</span>
+    <% end %>
   </div>
-  <div class="field">
-    <%= f.label :channel_url, 'YouTubeチャンネルURL' %><br />
-    <%= f.text_field :channel_url, autofocus: true,autocomplete:"channel_url" %>
-  </div>
-   <div class="field">
-    <%= f.label :twitter_url, 'TwitterURL' %><br />
-    <%= f.text_field :twitter_url, autofocus: true,autocomplete:"twitter_url" %>
-  </div> 
-   <div class="field">
-    <%= f.label :what_channel, 'どんなチャンネル？' %><br />
-    <%= f.text_area :what_channel, autofocus: true,autocomplete:"what_channel" %>
-  </div> 
-
-  <div class="field">
-    <%= f.label :email, 'メールアドレス' %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "更新" %>
-  </div>
-<% end %>
-
-<%= link_to "戻る", :back %>
+</div>

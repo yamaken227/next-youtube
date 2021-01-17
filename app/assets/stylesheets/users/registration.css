@@ -1,0 +1,158 @@
+.registration-contents {
+  background-image: url("/images/toppage_image.jpg");
+  background-color:rgba(255,255,255,0.3);
+  background-blend-mode:lighten;
+  background-size: 100%;
+  background-repeat: repeat;
+  font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+.registration-header {
+  color: #fff;
+  font-size: 3vh;
+  margin-top: 10vh;
+}
+.registration-main {
+  text-align: center;
+  background-color: #FFF;
+  width: 70vw;
+  min-width: 450px;
+  padding: 7vh 7vw;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+.field-registration {
+  margin-top: 3vh;
+}
+.registration-label-text {
+  font-size: 3vh;
+  font-weight: bold;
+}
+.registration-text[type="text"] { 
+  width: 100%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+.registration-text[type="text"]:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
+.registration-main textarea { 
+  width: 100%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+.registration-main textarea:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
+.registration-text[type="email"] { 
+  width: 100%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+.registration-text[type="email"]:focus {
+  border-color: rgb(176, 197, 219);
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
+.registration-text[type="password"] { 
+  width: 100%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px 0;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+.registration-text[type="password"]:focus {
+  border-color: rgb(176, 197, 219);
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
+.actions {
+  font-size: 3vh;
+  margin-top: 7vh ;
+}
+.actions input {
+  background-color: #fff;
+}
+.actions input:hover {
+  background-color: #dedede;
+  box-shadow: 0px 4px 8px #fff;
+}
+.registration-main li {
+  font-size: 3vh;
+  font-weight: bold;
+  color: red;
+}
+.registration-page-move {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7vh;
+}
+.registration-top-btn {
+  background: #f5f5f5;
+  border-radius: 4%;
+  padding: 16px 24px;
+  box-shadow: 0px 2px 4px #0000003a;
+  padding: 15px;
+  margin-left: 15px;
+}
+.registration-top-btn:hover {
+  background-color: #dedede;
+  box-shadow: 0px 4px 8px #fff;
+}
+.registration-common-btn-text {
+  color: #000000;
+  font-size: 15px;
+  font-weight :bold;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.registration-main li {
+  font-size: 3vh;
+  font-weight: bold;
+  color: red;
+}
+.registration-page-move {
+  display: flex;
+  justify-content: space-between;
+}
+.registration-top-btn {
+  background: #f5f5f5;
+  border-radius: 4%;
+  padding: 16px 24px;
+  box-shadow: 0px 2px 4px #0000003a;
+  padding: 15px;
+  margin-left: 15px;
+}
+.registration-top-btn:hover {
+  background-color: #dedede;
+  box-shadow: 0px 4px 8px #fff;
+}
+.registration-common-btn-text {
+  color: #000000;
+  font-size: 15px;
+  font-weight :bold;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
