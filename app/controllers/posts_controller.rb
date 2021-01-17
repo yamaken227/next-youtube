@@ -49,6 +49,9 @@ class PostsController < ApplicationController
   end
 
   def update
+    url = params[:post][:video_url]
+    url = url.slice(-11, 11)
+    params[:post][:video_url] = url
     if @post.update(post_params)
       redirect_to post_path
     else

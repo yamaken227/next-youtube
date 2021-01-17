@@ -1,18 +1,35 @@
-<%= form_with( model: @post, local: true ) do |f| %>
-<%= render 'shared/error_messages', model: f.object %>
-  <div class="field">
-    <%= f.label :title, '動画のタイトル' %><br />
-    <%= f.text_field :title, autofocus: true,autocomplete:"title" %>
+<div class="posts-contents">
+  <header class="postal-header">
+    <h1>動画情報編集フォーム</h1>
+  </header>
+  <div class="posts-main">
+    <%= form_with( model: @post, local: true ) do |f| %>
+    <%= render 'shared/error_messages', model: f.object %>
+    <div class="field-posts">
+      <div class="field">
+        <%= f.label :title, '動画のタイトル', class:"weight-bold-text" %><br />
+        <%= f.text_field :title,class:"posts_text", autofocus: true %>
+      </div>
+      <div class="field">
+        <%= f.label :highlights, '動画の見どころ', class:"weight-bold-text" %><br />
+        <%= f.text_field :highlights,class:"posts_text", autofocus: true %>
+      </div>
+      <div class="field">
+        <%= f.label :video_url, '動画のURL', class:"weight-bold-text" %><br />
+        <%= f.text_field :video_url, :value =>"https://www.youtube.com/watch?v=" + @post.video_url,class:"posts_text", autofocus: true %>
+      </div> 
+      <div class="actions">
+        <%= f.submit "投稿" %>
+      </div>
+    </div>
+    <% end %>
   </div>
-  <div class="field">
-    <%= f.label :highlights, '動画の見どころ' %><br />
-    <%= f.text_field :highlights, autofocus: true,autocomplete:"highlights" %>
+  <div class="registration-page-move">
+    <%= link_to(posts_path, class: 'registration-top-btn') do %>
+      <span class='registration-common-btn-text'>トップページへ</span>
+    <% end %>
+    <%= link_to(user_path(current_user.id), class: 'registration-top-btn') do %>
+      <span class='registration-common-btn-text'>マイページへ</span>
+    <% end %>
   </div>
-  <div class="field">
-    <%= f.label :video_url, '動画のURL' %><br />
-    <%= f.text_field :video_url, autofocus: true,autocomplete:"video_url" %>
-  </div> 
-  <div class="actions">
-    <%= f.submit "投稿" %>
-  </div>
-<% end %>
+</div>
