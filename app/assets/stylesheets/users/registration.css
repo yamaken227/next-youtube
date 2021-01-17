@@ -106,6 +106,7 @@
 .registration-page-move {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 7vh;
 }
 .registration-top-btn {
   background: #f5f5f5;
