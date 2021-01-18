@@ -16,10 +16,10 @@
       </div>
       <div class="field">
         <%= f.label :video_url, '動画のURL', class:"weight-bold-text" %><br />
-        <%= f.text_field :video_url, :value =>"https://www.youtube.com/watch?v=" + @post.video_url,class:"posts_text", autofocus: true %>
+        <%= f.text_field :video_url,class:"posts_text", autofocus: true %>
       </div> 
       <div class="actions">
-        <%= f.submit "投稿" %>
+        <%= f.submit "保存" %>
       </div>
     </div>
     <% end %>

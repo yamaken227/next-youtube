@@ -66,6 +66,13 @@
 .list:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
+.none-video {
+  display: flex;
+  margin: auto;
+}
+.none-video h1 {
+  color: #fff;
+}
 .post-btn {
   width: 120px;
   background: rgba(	240,128,128, 0.7);

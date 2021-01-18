@@ -5,7 +5,7 @@ FactoryBot.define do
     password              { 'abc123abc' }
     password_confirmation { password }
     subscribers_num       { 1000 }
-    channel_url           { 'httppppppppppp' }
+    channel_url           { 'https://www.youtube.com/channel/' }
     what_channel          { 'これはテストです。' }
   end
 end

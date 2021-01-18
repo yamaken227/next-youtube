@@ -8,4 +8,7 @@ class Post < ApplicationRecord
     validates :highlights
     validates :video_url
   end
+
+  VALID_YOUTUBE_URL = /(\Ahttps:\/\/www\.youtube\.com\/watch\?v=)+[\w]{11}\z/
+  validates_format_of :video_url, with: VALID_YOUTUBE_URL, message: 'はYouTubeの動画のURLのみご利用いただけます'
 end
