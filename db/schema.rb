@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_05_055645) do
+ActiveRecord::Schema.define(version: 2021_01_18_031231) do
 
   create_table "impressions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "impressionable_type"
@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 2021_01_05_055645) do
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "video_str"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
