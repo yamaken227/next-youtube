@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 <div class="video-detail-page">
   <div class="video-watch">
-    <iframe width="1000" height="500" src="https://www.youtube.com/embed/<%= @post.video_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="1000" height="500" src="https://www.youtube.com/embed/<%= @post.video_str%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
   <table class="detail-table">
     <tbody>
@@ -23,8 +23,7 @@
       </tr>
       <tr>
         <th class="detail-post">YouTubeで見る</th>
-        <% url = 'https://youtu.be/' + @post.video_url %>
-        <td class="detail-info"><%= link_to url,url %></td>
+        <td class="detail-info"><%= link_to @post.video_url,@post.video_url %></td>
       </tr>
     </tbody>
   </table>

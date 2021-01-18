@@ -38,7 +38,7 @@
         <% @lists.each do |list| %>
           <li class="video-list">
             <div class="video-u-p">
-              <iframe width="710" height="400" src="https://www.youtube.com/embed/<%= list.video_url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="710" height="400" src="https://www.youtube.com/embed/<%= list.video_str %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               <p><%= link_to list.title, post_path(list.id) , class: 'video-title' %></p>
               <% if user_signed_in? && @user.id == current_user.id %>
                 <p><%= link_to 'この動画を編集する', edit_post_path(list.id), method: :get, class:'video-edit' %></p>
