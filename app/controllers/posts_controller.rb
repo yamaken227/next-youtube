@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.order('RAND()').limit(6)
+    @posts = Post.order('RAND()').limit(8)
   end
 
   def new
@@ -45,7 +45,7 @@ class PostsController < ApplicationController
   end
 
   def edit
-    redirect_to root_path unless current_user.id == @post.user.id
+    redirect_to posts_path unless current_user.id == @post.user.id
   end
 
   def update
@@ -53,7 +53,7 @@ class PostsController < ApplicationController
     url = url.slice(-11, 11)
     params[:post][:video_url] = url
     if @post.update(post_params)
-      redirect_to post_path
+      redirect_to user_path(@post.user_id)
     else
       render :edit
     end
