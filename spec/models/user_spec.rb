@@ -8,7 +8,7 @@ RSpec.describe User, type: :model do
   describe 'ユーザー新規登録' do
     context '登録成功時' do
       it 'channel_nameとemail、password、password_confirmation、subscribers_num、channel_url
-      what_channel、twitter_urlが存在すれば登録できる' do
+      what_channelが存在すれば登録できる' do
         expect(@user).to be_valid
       end
       it 'subscribers_numが半角数字なら' do
@@ -37,6 +37,14 @@ RSpec.describe User, type: :model do
       it 'passwordが半角英数混合なら登録できる' do
         @user.password = 'aaa123aaa'
         @user.password_confirmation = 'aaa123aaa'
+        expect(@user).to be_valid
+      end
+      it 'channel_urlは「https://www.youtube.com/channel/」が含まれているなら登録できる' do
+        @user.channel_url = 'https://www.youtube.com/channel/'
+        expect(@user).to be_valid
+      end
+      it 'twitter_urlが空でない場合「https://twitter.com/」が含まれているなら登録できる' do
+        @user.twitter_url = 'https://twitter.com/'
         expect(@user).to be_valid
       end
     end
@@ -75,6 +83,16 @@ RSpec.describe User, type: :model do
         @user.channel_url = ''
         @user.valid?
         expect(@user.errors.full_messages).to include('チャンネルURLを入力してください')
+      end
+      it 'channel_urlに「https://www.youtube.com/channel/」が含まれていないなら登録できない' do
+        @user.channel_url = 'aaaaa'
+        @user.valid?
+        expect(@user.errors.full_messages).to include('チャンネルURLはYouTubeのチャンネルURLのみご利用いただけます')
+      end
+      it 'twitter_urlが空でない時「https://twitter.com/」が含まれていないなら登録できない' do
+        @user.twitter_url = 'aaaaa'
+        @user.valid?
+        expect(@user.errors.full_messages).to include('Twitter urlはTwitterのURLのみご利用いただけます')
       end
       it 'what_channelが空だと登録できない' do
         @user.what_channel = ''
