@@ -12,7 +12,7 @@
   padding-top: 2vh;
   margin-bottom: 2.5vh;
   border-bottom: solid;
-  border-color: rgba(	240,128,128, 0.7);
+  border-color: rgba(240,128,128, 0.7);
   display: inline-block;
 }
 .edit-user {
@@ -23,7 +23,7 @@
   border: 2px solid #dededf;
 }
 .edit-user:hover {
-  color:rgba(	240,128,128, 0.7);;
+  color:rgba(240,128,128, 0.7);;
 }
 .user-detail-table {
   margin-bottom: 3vh;
@@ -34,22 +34,22 @@
 }
 .user-detail {
   width: 35%;
-  background-color: #eee;
-  border: 2px solid #dededf;
+  background-color: rgba(240,128,128, 0.3);
+  border: 2px solid #dedede;
   font-size: 18px;
   text-align: center;
 }
 .user-info {
   width: 100%;
   padding: 20px;
-  border: 1px solid #dedede;
+  border: 2px solid #dedede;
   font-size: 18px;
   text-align: left;
   word-break: break-word;
 }
 .new-video h1 {
   border-bottom: solid;
-  border-color: rgba(	240,128,128, 0.7);
+  border-color: rgba(240,128,128, 0.7);
   display: inline-block;
 }
 .video-u-p{
@@ -92,7 +92,7 @@
   word-wrap: break-word;
 }
 .video-title:hover {
-  color:rgba(	240,128,128, 0.7);;
+  color:rgba(240,128,128, 0.7);;
 }
 .video-edit {
   color: #000000;
@@ -100,7 +100,7 @@
   text-decoration: none;
 }
 .video-edit:hover {
-  color:rgba(	240,128,128, 0.7);;
+  color:rgba(240,128,128, 0.7);;
 }
 .video-destroy {
   color: #000000;
@@ -108,7 +108,7 @@
   text-decoration: none;
 }
 .video-destroy:hover {
-  color:rgba(	240,128,128, 0.7);;
+  color:rgba(240,128,128, 0.7);;
 }
 .page-move {
   display: flex;
@@ -158,13 +158,13 @@
 .current {
   font-style: normal;
   color: white;
-  background: rgba(	240,128,128, 0.7);
+  background: rgba(240,128,128, 0.7);
   border-radius: 22.5px;
   font-family: 'Nunito', sans-serif;
 }
 
 .pagination a:hover {
-  background: rgba(	240,128,128, 0.7);
+  background: rgba(240,128,128, 0.7);
 }
 
 .pagination .disabled {

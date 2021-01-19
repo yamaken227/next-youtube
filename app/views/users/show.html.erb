@@ -52,7 +52,7 @@
               <p><%= link_to 'この動画を編集する', edit_post_path(list.id), method: :get, class:'video-edit' %></p>
               <p><%= link_to 'この動画を削除する', post_path(list.id), method: :delete, data: { confirm: 'この動画を削除しますか？' }, class:'video-destroy' %></p>
             <% end %>
-            
+        
           </li>
         <% end %>
       </ul>
