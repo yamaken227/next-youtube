@@ -6,8 +6,8 @@
   <table class="detail-table">
     <tbody>
       <tr>
-        <th class="detail-post">PV数</th>
-        <td class="detail-info"><%=  @post.impressionist_count %>回　　※PV数は、ユーザーがページを閲覧した回数です</td>
+        <th class="detail-post">このページが閲覧された回数</th>
+        <td class="detail-info"><%=  @post.impressionist_count %>回</td>
       </tr>
       <tr>
         <th class="detail-post">動画タイトル</th>
@@ -19,11 +19,11 @@
       </tr>
       <tr>
         <th class="detail-post">動画投稿者</th>
-        <td class="detail-info"><%= link_to @post.user.channel_name,@post.user.channel_url %></td>
+        <td class="detail-info"><%= link_to @post.user.channel_name,@post.user.channel_url, target: :_blank %></td>
       </tr>
       <tr>
         <th class="detail-post">YouTubeで見る</th>
-        <td class="detail-info"><%= link_to @post.video_url,@post.video_url %></td>
+        <td class="detail-info"><%= link_to @post.video_url,@post.video_url, target: :_blank %></td>
       </tr>
     </tbody>
   </table>
@@ -31,7 +31,9 @@
 <div class="container">
   <% if user_signed_in? && @post.user.id == current_user.id %>
     <div class="messages">
-      <h2>応援メッセージ一覧</h2>
+      <div class="messages-top">
+        <h1>応援メッセージ一覧</h1>
+      </div>
       <% @messages.each do |message| %>
         <p><%= message.message %></p>
       <% end %>
@@ -49,6 +51,10 @@
     <span class='common-btn-text'>トップページへ</span>
   <% end %>
   <%= link_to(user_path(@post.user_id), class: 'user-btn') do %>
-    <span class='common-btn-text'> 投稿者のページへ</span>
+    <% if user_signed_in? && @post.user.id == current_user.id %>
+      <span class='common-btn-text'> マイページへ</span>
+    <% else %>
+      <span class='common-btn-text'> 投稿者のページへ</span>
+    <% end %>
   <% end %>
 </div>
