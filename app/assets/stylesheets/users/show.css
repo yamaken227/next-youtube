@@ -26,7 +26,7 @@
   color:rgba(240,128,128, 0.7);;
 }
 .user-detail-table {
-  margin-bottom: 3vh;
+  margin-bottom: 3.5vh;
   margin-top: 3vh;
   width: 100%;
   padding-left: 9vw;
@@ -71,7 +71,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   list-style: none;
-  margin-top: 3vh;
+  margin-top: 3.5vh;
 }
 .video-list {
   width: 33%;
