@@ -4,6 +4,10 @@
     <%= image_tag("toppage_image.jpg", class:"top-image")%>
     <p>Let's Shuffle</p>
   </div>
+  <%= form_with( model: @post, method: :get, class: 'shuffle-btn',remote: true) do |f| %>
+    <%= f.text_area :text,class:"text", placeholder: "タイトルのキーワードでShuffle", autofocus: true %>
+    <%= f.submit "Shuffle",class: 'shuffle-btn-text' %>
+  <% end %>
   <ul class='video-lists'>
     <% if @posts.present? %>
     <%# 動画がいっぽんでもあるとき %>
@@ -26,11 +30,6 @@
       <span class='post-btn-text'>投稿する</span>
       <%= image_tag 'icon_post.png' , size: '50x70' ,class: "post-btn-icon" %>
     <% end %>
-  <% end %>
-  
-  <%= link_to(posts_path, class: 'shuffle-btn',remote: true) do %>
-    
-    <span class='shuffle-btn-text'>Shuffle</span>
   <% end %>
 
   <%= render "shared/footer"%>

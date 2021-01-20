@@ -8,7 +8,12 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.order('RAND()').limit(8)
+    if params[:text] == nil || params[:text] == ""
+      @posts = Post.order('RAND()').limit(8)
+    else
+      @posts = Post.where('title LIKE(?)', "%#{params[:text]}%").order('RAND()').limit(8)   
+#    @posts = Post.search(params[:keyword]).order('RAND()').limit(8)
+    end
   end
 
   def new
@@ -59,6 +64,7 @@ class PostsController < ApplicationController
       render :edit
     end
   end
+
 
   private
 
