@@ -111,13 +111,12 @@
   display: flex;
   justify-content: center;
 }
-.text {
-  width: 27%;
-  height: 5vh;
-}
+
 .text {
   font-size: 2.5vh;
   padding: 13px;
+  width: 27%;
+  height: 5vh;
 }
 .text ::placeholder {
   font-weight: bold;
