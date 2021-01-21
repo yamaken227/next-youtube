@@ -6,7 +6,7 @@
   <table class="detail-table">
     <tbody>
       <tr>
-        <th class="detail-post">このページが閲覧された回数</th>
+        <th class="detail-post">閲覧された回数</th>
         <td class="detail-info"><%=  @post.impressionist_count %>回</td>
       </tr>
       <tr>
@@ -42,6 +42,7 @@
     <%= form_with(model: [@post, @message], class: "message-form", local: true) do |form| %>
       <%= form.text_area :message, placeholder: "応援メッセージを送る", rows: "2" ,class: "message-area" %>
       <p class="precautionary-statement">※不適切な発言はお控えください</p>
+      <p class="precautionary-statement">※メッセージは投稿者本人のみ閲覧可能です</p>
       <%= form.submit "送信", class:"submit-btn" %>
     <% end %>
   <% end %>

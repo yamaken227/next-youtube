@@ -122,9 +122,6 @@
 .text ::placeholder {
   font-weight: bold;
 }
-.shuffle-btn:active{
-  box-shadow: 0px 4px 8px rgba(	240,128,128, 0);
-}
 .shuffle-btn-text {
   color: #fff;
   display: block;
@@ -133,7 +130,6 @@
   font-weight :bold;
   text-decoration: none;
   margin-bottom: 5px;
-
   width: 150px;
   background-color: rgba(	240,128,128, 0.7);
   text-align: center;
@@ -145,4 +141,7 @@
   padding: 16px 24px;
   box-shadow: 0px 4px 8px #fff;
   z-index: 3;
+}
+.shuffle-btn-text:active {
+  box-shadow: 0px 4px 8px rgba(	240,128,128, 0);
 }

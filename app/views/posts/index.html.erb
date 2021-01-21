@@ -5,7 +5,7 @@
     <p>Let's Shuffle</p>
   </div>
   <%= form_with( model: @post, method: :get, class: 'shuffle-btn',remote: true) do |f| %>
-    <%= f.text_area :text,class:"text", placeholder: "タイトルのキーワードでShuffle", autofocus: true %>
+    <%= f.text_field :text,class:"text", placeholder: "キーワードでShuffle", autofocus: true %>
     <%= f.submit "Shuffle",class: 'shuffle-btn-text' %>
   <% end %>
   <ul class='video-lists'>

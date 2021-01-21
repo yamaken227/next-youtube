@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   impressionist actions: [:show]
   before_action :authenticate_user!, only: [:new, :create, :edit, :destroy]
   before_action :set_post, only: [:edit, :update]
-  before_action :set_cache_headers, only: :index
+#  before_action :set_cache_headers, only: [:index,:show]
   
   def home
   end
@@ -77,6 +77,6 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
   def set_cache_headers
-    response.headers["Cache-Control"] = "no-store"
+#    response.headers["Cache-Control"] = "no-store"
   end
 end
