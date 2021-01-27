@@ -15,7 +15,7 @@
 ![demo](https://user-images.githubusercontent.com/74579887/105815770-c5335000-5ff6-11eb-960a-dbcfab781826.gif)
 
 ## App URL
-### https://next-youtube.herokuapp.com/
+### http://54.168.173.35/
 
 ## Usage
 ### 基本的にログインなしで使うことができますが、投稿機能などのテストは以下のテストアカウントからログインを行うことでできます
