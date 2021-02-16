@@ -18,7 +18,7 @@
  - Nginx
  - Puma
  - AWS EC2
- -RSpec
+ - RSpec
 
 ## Demo
 ![demo](https://user-images.githubusercontent.com/74579887/105815770-c5335000-5ff6-11eb-960a-dbcfab781826.gif)
