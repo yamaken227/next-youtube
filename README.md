@@ -11,6 +11,15 @@
 単機能且つ直感的に何をすればいいのががわかる設計になっております。
 「楽」に自分好みの動画を見つけ、また見つけられることができるサービスがNext YouTubeです。
 
+## Technology used
+ - Ruby 2.6.5
+ - Ruby on Rails 6.0.3.4
+ - MySQL 5.6.50 
+ - Nginx
+ - Puma
+ - AWS EC2
+ -RSpec
+
 ## Demo
 ![demo](https://user-images.githubusercontent.com/74579887/105815770-c5335000-5ff6-11eb-960a-dbcfab781826.gif)
 
