@@ -63,7 +63,6 @@ YouTubeではコメント機能がついており、そこでは優良なコメ�
 ### Association
 
 - has_many :posts
-- has_many :comments
 
 ## posts テーブル
 
@@ -77,9 +76,9 @@ YouTubeではコメント機能がついており、そこでは優良なコメ�
 ### Association
 
 - belongs_to  :user
-- has_many    :comments
+- has_many    :messages
 
-## comments テーブル
+## messages テーブル
 
 | Column     | Type       | Options                        |
 | ---------- | ---------- | ------------------------------ |
